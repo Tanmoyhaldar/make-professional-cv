@@ -1,5 +1,3 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { setUserDetails } from '../../../redux/userDetailsSlice';
 import usePreview from './usePreview';
 
 export default function Preview() {

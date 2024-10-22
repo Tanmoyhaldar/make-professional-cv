@@ -10,8 +10,14 @@ export default function useEducation() {
         dispatch(setEducationDetails({index, id, value}))
     }
 
+    const handleEducationDetailsCheckBox = (index, id, value) => {
+        dispatch(setEducationDetails({index, id, value}))
+    }
+
+
   return {
     educationDetails,
     handleEducationDetails,
+    handleEducationDetailsCheckBox,
   }
 }
