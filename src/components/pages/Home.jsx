@@ -10,8 +10,6 @@ export default function Home() {
 
   const {
     educationList,
-    addMoreEducation,
-    removeEducation,
   } = useHome()
   return (
     <div>
@@ -21,19 +19,8 @@ export default function Home() {
       <UserDetails />
       <hr />
 
+        <Education/> {/* Pass the unique index as a prop */}
       <div>
-        {console.log("educationList---",educationList)}
-        {educationList.map((entry) => (
-          <div key={entry.id}>
-            <Education index={entry.id} removeEducation={removeEducation}/> {/* Pass the unique index as a prop */}
-          </div>
-        ))}
-        <button
-          className='btn btn-primary my-1 mx-1'
-          onClick={addMoreEducation} // Call the function when clicked
-        >
-          + Add More
-        </button>
       </div>
     </div>
   )
