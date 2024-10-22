@@ -1,0 +1,1 @@
+export const checkBoxTitleUserDetails = "If you want to add it in your CV, then please check this."
