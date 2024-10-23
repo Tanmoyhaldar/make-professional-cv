@@ -6,6 +6,9 @@ export default function UserEducationPreview() {
     } = usePreview()
     return (
         <div>
+                {educationDetails?.some(edu => edu.flag) &&
+            <>
+            <div>Education Details</div>
             <table>
                 <tr>
                     <th>Qualification</th>
@@ -14,6 +17,7 @@ export default function UserEducationPreview() {
                     <th>Passing Year</th>
                     <th>Grades</th>
                 </tr>
+                
                 {educationDetails?.map((edu, index) => (
                     edu.flag ?
                         (<tr key={index}>
@@ -27,6 +31,8 @@ export default function UserEducationPreview() {
                         )
                 ))}
             </table>
+            </>
+            }
         </div>
     )
 }

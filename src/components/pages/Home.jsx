@@ -3,6 +3,7 @@ import Preview from './preview/preview'
 import UserDetails from './user-details/userDetails'
 import Education from './education/Education'
 import useHome from './useHome'
+import SkillsExpertise from './skill-expertise/skillsExpertise'
 
 export default function Home() {
   // 1. user details
@@ -12,23 +13,26 @@ export default function Home() {
     educationList,
   } = useHome()
   return (
-    <div className='border border-primary m-2 p-2'>
-      <table>
-        <tr>
-          <td>
-            <div className='border border-success p-2 rounded my-1'>
-              <UserDetails />
-            </div>
+      <div className="d-flex p-2 justify-content-center">
+        <div>
 
-            <div className='border border-success p-2 rounded my-1'>
-              <Education />
-            </div>
-          </td>
-          <td>
-            <Preview />
-          </td>
-        </tr>
-      </table>
+          <div className='border border-success p-2 rounded my-1'>
+            <UserDetails />
+          </div>
+
+          <div className='border border-success p-2 rounded my-1'>
+            <Education />
+          </div>
+
+          <div className='border border-success p-2 rounded my-1'>
+            <SkillsExpertise />
+          </div>
+
+        </div>
+
+        <div>
+          <Preview />
+        </div>
 
     </div>
   )
