@@ -1,17 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // Initial state for user details
-const initialState = [{
-  qualification: "",
-  institute: "",
-  stream: "",
-  passingYear: "",
-  grades: "",
-  qualificationChecked: false,
-  instituteChecked: false,
-  streamChecked: false,
-  passingYearChecked: false,
-  gradesChecked: false,
+const initialState = [
+  {
+    flag: false,
+    qualification: "",
+    institute: "",
+    stream: "",
+    passingYear: "",
+    grades: "",
+    qualificationChecked: false,
+    instituteChecked: false,
+    streamChecked: false,
+    passingYearChecked: false,
+    gradesChecked: false,
 },
 ];
 
@@ -28,6 +30,7 @@ const userEducationSlice = createSlice({
     },
     addEducationDetails: (state) => {
       state.push({
+        flag: false,
         qualification: "",
         institute: "",
         stream: "",
