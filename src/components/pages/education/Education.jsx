@@ -14,7 +14,7 @@ export default function Education() {
 
   return (
     <>
-      {[...Array(educationListCnt)].map((_, index) => (
+      {educationListCnt != 0 && [...Array(educationListCnt)].map((_, index) => (
         <NewEducation
           key={index}
           index={index}
@@ -28,15 +28,17 @@ export default function Education() {
       <button
         className='btn btn-primary mx-1'
         onClick={addNewEducation}
-      >+ Add More
+      >+ Add Education
       </button>
 
+        {educationListCnt > 1 &&
       <button
-        className='btn btn-danger mx-1'
-        onClick={() => removeEducation()}
+      className='btn btn-danger mx-1'
+      onClick={() => removeEducation()}
       >
-        - Remove
+        - Remove Education
       </button>
+      }
     </>
   );
 }

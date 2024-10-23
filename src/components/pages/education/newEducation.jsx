@@ -5,6 +5,13 @@ export default function NewEducation({index, handleEducationDetails, educationDe
     return (
         <>
         <div className='border border-dark p-2 rounded my-1'>
+                    <input
+                        className="form-check-input mt-0"
+                        type="checkbox"
+                        checked={educationDetails[index]?.flag}
+                        title={checkBoxTitleUserDetails}
+                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'flag', e.target.checked) }}
+                    />
         {/* Qualification */}
             <div className="input-group mb-1" key={`${index}_qualification`}>
                 <div className="input-group-text">

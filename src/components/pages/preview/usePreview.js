@@ -5,9 +5,8 @@ export default function usePreview() {
     const educationDetails = useSelector((state) => state.education)
     const dispatch = useDispatch();
 
-    console.log("usePreview---",educationDetails)
-
   return {
     userDetailsValue,
+    educationDetails
   }
 }
