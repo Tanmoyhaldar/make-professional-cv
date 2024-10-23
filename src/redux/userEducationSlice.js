@@ -26,6 +26,20 @@ const userEducationSlice = createSlice({
         state[index][id] = value;
       }
     },
+    addEducationDetails: (state) => {
+      state.push({
+        qualification: "",
+        institute: "",
+        stream: "",
+        passingYear: "",
+        grades: "",
+        qualificationChecked: false,
+        instituteChecked: false,
+        streamChecked: false,
+        passingYearChecked: false,
+        gradesChecked: false,
+      });
+    },
     removeEducationDetails: (state, action) => {
       const indexToRemove = action.payload;
       const updatedState = [...state];
@@ -35,5 +49,5 @@ const userEducationSlice = createSlice({
   },
 });
 
-export const { setEducationDetails, removeEducationDetails } = userEducationSlice.actions;  // Export the action creator
+export const { setEducationDetails, removeEducationDetails, addEducationDetails } = userEducationSlice.actions;  // Export the action creator
 export default userEducationSlice.reducer;  // Export the reducer
