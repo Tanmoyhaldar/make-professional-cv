@@ -13,30 +13,6 @@ const initialState = [{
   passingYearChecked: false,
   gradesChecked: false,
 },
-{
-  qualification: "",
-  institute: "",
-  stream: "",
-  passingYear: "",
-  grades: "",
-  qualificationChecked: false,
-  instituteChecked: false,
-  streamChecked: false,
-  passingYearChecked: false,
-  gradesChecked: false,
-},
-{
-  qualification: "",
-  institute: "",
-  stream: "",
-  passingYear: "",
-  grades: "",
-  qualificationChecked: false,
-  instituteChecked: false,
-  streamChecked: false,
-  passingYearChecked: false,
-  gradesChecked: false,
-},
 ];
 
 // Create the user slice
@@ -49,9 +25,15 @@ const userEducationSlice = createSlice({
       if (state[index]) {
         state[index][id] = value;
       }
-    }
+    },
+    removeEducationDetails: (state, action) => {
+      const indexToRemove = action.payload;
+      const updatedState = [...state];
+    updatedState.splice(indexToRemove, 1);
+    return updatedState;
+    },
   },
 });
 
-export const { setEducationDetails } = userEducationSlice.actions;  // Export the action creator
+export const { setEducationDetails, removeEducationDetails } = userEducationSlice.actions;  // Export the action creator
 export default userEducationSlice.reducer;  // Export the reducer

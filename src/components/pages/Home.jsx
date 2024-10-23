@@ -12,16 +12,24 @@ export default function Home() {
     educationList,
   } = useHome()
   return (
-    <div>
-      <Preview />
-      <hr />
+    <div className='border border-primary m-2 p-2'>
+      <table>
+        <tr>
+          <td>
+            <div className='border border-success p-2 rounded my-1'>
+              <UserDetails />
+            </div>
 
-      <UserDetails />
-      <hr />
+            <div className='border border-success p-2 rounded my-1'>
+              <Education />
+            </div>
+          </td>
+          <td>
+            <Preview />
+          </td>
+        </tr>
+      </table>
 
-        <Education/> {/* Pass the unique index as a prop */}
-      <div>
-      </div>
     </div>
   )
 }
