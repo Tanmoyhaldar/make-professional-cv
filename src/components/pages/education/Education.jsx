@@ -15,14 +15,17 @@ export default function Education() {
   return (
     <>
       {educationListCnt != 0 && [...Array(educationListCnt)].map((_, index) => (
-        <NewEducation
-          key={index}
-          index={index}
-          handleEducationDetails={handleEducationDetails}
-          educationDetails={educationDetails}
-          handleEducationDetailsCheckBox={handleEducationDetailsCheckBox}
-          removeEducation={removeEducation}
-        />
+        <>
+          <NewEducation
+            key={index}
+            index={index}
+            handleEducationDetails={handleEducationDetails}
+            educationDetails={educationDetails}
+            handleEducationDetailsCheckBox={handleEducationDetailsCheckBox}
+            removeEducation={removeEducation}
+          />
+          <hr />
+        </>
       ))}
 
       <button
@@ -31,13 +34,13 @@ export default function Education() {
       >+ Add Education
       </button>
 
-        {educationListCnt > 1 &&
-      <button
-      className='btn btn-danger mx-1'
-      onClick={() => removeEducation()}
-      >
-        - Remove Education
-      </button>
+      {educationListCnt > 1 &&
+        <button
+          className='btn btn-danger mx-1'
+          onClick={() => removeEducation()}
+        >
+          - Remove Education
+        </button>
       }
     </>
   );

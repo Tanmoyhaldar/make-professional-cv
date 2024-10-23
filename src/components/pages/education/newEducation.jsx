@@ -1,18 +1,21 @@
 import React from 'react'
-import {checkBoxTitleUserDetails} from '../../constants/constant'
+import { checkBoxTitleUserDetails } from '../../constants/constant'
 
-export default function NewEducation({index, handleEducationDetails, educationDetails, handleEducationDetailsCheckBox}) {
+export default function NewEducation({ index, handleEducationDetails, educationDetails, handleEducationDetailsCheckBox }) {
     return (
         <>
-        <div className='border border-dark p-2 rounded my-1'>
-                    <input
-                        className="form-check-input mt-0"
-                        type="checkbox"
-                        checked={educationDetails[index]?.flag}
-                        title={checkBoxTitleUserDetails}
-                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'flag', e.target.checked) }}
-                    />
-        {/* Qualification */}
+            <div className="input-group-text my-1">
+                <input
+                    className="form-check-input mt-0"
+                    type="checkbox"
+                    checked={educationDetails[index]?.flag}
+                    title={checkBoxTitleUserDetails}
+                    onChange={(e) => { handleEducationDetailsCheckBox(index, 'flag', e.target.checked) }}
+                />
+                <span className='mx-2'>Education Details - {index + 1}</span>
+            </div>
+
+            {/* Qualification */}
             <div className="input-group mb-1" key={`${index}_qualification`}>
                 <div className="input-group-text">
                     <span className='mx-2'>Qualification</span>
@@ -121,7 +124,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     onChange={(e) => { handleEducationDetails(index, 'grades', e.target.value) }}
                 />
             </div>
-        </div>
+
         </>
     )
 }

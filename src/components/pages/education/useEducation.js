@@ -10,12 +10,10 @@ export default function useEducation() {
     const [educationListCnt, setEducationListCnt] = useState(1)
 
     const handleEducationDetails = (index, id, value) => {
-      // console.log("handleEducationDetails---",index, id, value)
         dispatch(setEducationDetails({index, id, value}))
     }
 
     const handleEducationDetailsCheckBox = (index, id, value) => {
-      // console.log("handleEducationDetailsCheckBox---",index, id, value)
         dispatch(setEducationDetails({index, id, value}))
     }
 
