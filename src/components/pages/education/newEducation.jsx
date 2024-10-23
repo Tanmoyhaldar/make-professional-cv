@@ -4,6 +4,7 @@ import {checkBoxTitleUserDetails} from '../../constants/constant'
 export default function NewEducation({index, handleEducationDetails, educationDetails, handleEducationDetailsCheckBox}) {
     return (
         <>
+        <div className='border border-dark p-2 rounded my-1'>
         {/* Qualification */}
             <div className="input-group mb-1" key={`${index}_qualification`}>
                 <div className="input-group-text">
@@ -11,7 +12,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     <input
                         className="form-check-input mt-0"
                         type="checkbox"
-                        checked={educationDetails[index].qualificationChecked}
+                        // checked={educationDetails[index].qualificationChecked}
                         title={checkBoxTitleUserDetails}
                         onChange={(e) => { handleEducationDetailsCheckBox(index, 'qualificationChecked', e.target.checked) }}
                     />
@@ -20,7 +21,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     type="text"
                     className="form-control"
                     placeholder='Enter Your Qualification'
-                    value={educationDetails[index].qualification}
+                    // value={educationDetails[index].qualification}
                     id="qualification"
                     onChange={(e) => { handleEducationDetails(index, 'qualification', e.target.value) }}
                 />
@@ -33,7 +34,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     <input
                         className="form-check-input mt-0"
                         type="checkbox"
-                        checked={educationDetails[index].instituteChecked}
+                        // checked={educationDetails[index].instituteChecked}
                         title={checkBoxTitleUserDetails}
                         onChange={(e) => { handleEducationDetailsCheckBox(index, 'instituteChecked', e.target.checked) }}
                     />
@@ -42,7 +43,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     type="text"
                     className="form-control"
                     placeholder='Enter Institute Name'
-                    value={educationDetails[index].institute}
+                    // value={educationDetails[index].institute}
                     id="institute"
                     onChange={(e) => { handleEducationDetails(index, 'institute', e.target.value) }}
                 />
@@ -55,7 +56,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     <input
                         className="form-check-input mt-0"
                         type="checkbox"
-                        checked={educationDetails[index].streamChecked}
+                        // checked={educationDetails[index].streamChecked}
                         title={checkBoxTitleUserDetails}
                         onChange={(e) => { handleEducationDetailsCheckBox(index, 'streamChecked', e.target.checked) }}
                     />
@@ -64,7 +65,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     type="text"
                     className="form-control"
                     placeholder='Enter Stream Name'
-                    value={educationDetails[index].stream}
+                    // value={educationDetails[index].stream}
                     id="stream"
                     onChange={(e) => { handleEducationDetails(index, 'stream', e.target.value) }}
                 />
@@ -77,7 +78,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     <input
                         className="form-check-input mt-0"
                         type="checkbox"
-                        checked={educationDetails[index].passingYearChecked}
+                        // checked={educationDetails[index].passingYearChecked}
                         title={checkBoxTitleUserDetails}
                         onChange={(e) => { handleEducationDetailsCheckBox(index, 'passingYearChecked', e.target.checked) }}
                     />
@@ -86,7 +87,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     type="text"
                     className="form-control"
                     placeholder='Enter Passing Year'
-                    value={educationDetails[index].passingYear}
+                    // value={educationDetails[index].passingYear}
                     id="passingYear"
                     onChange={(e) => { handleEducationDetails(index, 'passingYear', e.target.value) }}
                 />
@@ -99,7 +100,7 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     <input
                         className="form-check-input mt-0"
                         type="checkbox"
-                        checked={educationDetails[index].gradesChecked}
+                        // checked={educationDetails[index].gradesChecked}
                         title={checkBoxTitleUserDetails}
                         onChange={(e) => { handleEducationDetailsCheckBox(index, 'gradesChecked', e.target.checked) }}
                     />
@@ -108,12 +109,12 @@ export default function NewEducation({index, handleEducationDetails, educationDe
                     type="text"
                     className="form-control"
                     placeholder='Enter Grades'
-                    value={educationDetails[index].grades}
+                    // value={educationDetails[index].grades}
                     id="grades"
                     onChange={(e) => { handleEducationDetails(index, 'grades', e.target.value) }}
                 />
             </div>
-
+        </div>
         </>
     )
 }
