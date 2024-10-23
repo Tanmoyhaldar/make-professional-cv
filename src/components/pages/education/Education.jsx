@@ -8,8 +8,8 @@ export default function Education() {
     handleEducationDetails,
     handleEducationDetailsCheckBox,
     educationListCnt,
-    setEducationListCnt,
-    removeEducation
+    removeEducation,
+    addNewEducation
   } = useEducation();
 
   return (
@@ -27,9 +27,10 @@ export default function Education() {
 
       <button
         className='btn btn-primary mx-1'
-        onClick={() => setEducationListCnt(prev => prev + 1)}
+        onClick={addNewEducation}
       >+ Add More
       </button>
+
       <button
         className='btn btn-danger mx-1'
         onClick={() => removeEducation()}
