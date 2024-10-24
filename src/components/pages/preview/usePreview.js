@@ -6,6 +6,7 @@ export default function usePreview() {
     const skillsExpertiseDetails = useSelector((state) => state.skills)
     const courseDetails = useSelector((state) => state.course)
     const awardsDetails = useSelector((state) => state.awards)
+    const ecaDetails = useSelector((state) => state.eca)
     const dispatch = useDispatch();
 
   return {
@@ -14,5 +15,6 @@ export default function usePreview() {
     skillsExpertiseDetails,
     courseDetails,
     awardsDetails,
+    ecaDetails,
   }
 }

@@ -2,6 +2,7 @@ import UserAwardsPreview from './userAwardsPreview';
 import UserCourseWorkPreview from './userCourseWorkPreview';
 import UserDetailsPreview from './userDetailsPreview';
 import UserEducationPreview from './userEducationPreview';
+import UserExtraCurricularPreview from './userExtraCurricularPreview';
 import UserSkillsExpertisePreview from './userSkillsExpertisePreview';
 
 export default function Preview() {
@@ -13,6 +14,7 @@ export default function Preview() {
           <UserSkillsExpertisePreview />
           <UserCourseWorkPreview />
           <UserAwardsPreview />
+          <UserExtraCurricularPreview />
       </div>
     </>
   )

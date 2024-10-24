@@ -1,4 +1,4 @@
-import useAwardsAndECA from "../awardsAndECA/useAwardsAndECA"
+import useAwardsAndECA from "../awards/useAwards"
 import usePreview from "./usePreview"
 
 export default function UserAwardsPreview() {
