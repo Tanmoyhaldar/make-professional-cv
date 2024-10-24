@@ -4,9 +4,9 @@ import {setCourseWorkDetails, addCourseWork, removeCourseWork} from "../../../re
 import { setCommonFlag } from "../../../redux/userAllCommonSlice";
 
 export default function useCourseWork() {
-  const courseDetails = useSelector((state) => state.course);
-  const showAllCourseWork = useSelector((state) => state.common_flag)
-  const dispatch = useDispatch();
+  const courseDetails         = useSelector((state) => state.course);
+  const showAllCourseWork     = useSelector((state) => state.common_flag)
+  const dispatch              = useDispatch();
 
   const [courseWorkListCnt, setCourseWorkListCnt] = useState(1);
 

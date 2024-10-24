@@ -2,8 +2,8 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = [
     {
-        flag: false,
-        extraCurricular: "",
+        flag                : false,
+        extraCurricular     : "",
     },
 ]
 
@@ -19,8 +19,8 @@ const userExtraCurricularSlice = createSlice({
         },
         addExtraCurricular: (state) => {
             state.push({
-                flag: false,
-                extraCurricular: "",
+                flag                : false,
+                extraCurricular     : "",
             });
         },
         removeExtraCurricular: (state, action) => {

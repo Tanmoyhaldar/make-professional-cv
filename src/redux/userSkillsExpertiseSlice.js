@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // Initial state for user details
 const initialState = [{
-    flag: false,
-    title: "",
-    description: "",
+    flag            : false,
+    title           : "",
+    description     : "",
 }];
 
 // Create the user slice
@@ -20,9 +20,9 @@ const userSkillsExpertiseSlice = createSlice({
         },
         addSkillsExpertise: (state) => {
             state.push({
-                flag: false,
-                title: "",
-                description: "",
+                flag            : false,
+                title           : "",
+                description     : "",
             })
         },
         removeSkillsExpertise: (state, action) => {

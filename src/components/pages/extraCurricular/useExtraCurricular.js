@@ -4,9 +4,9 @@ import { setCommonFlag } from "../../../redux/userAllCommonSlice";
 import {setExtraCurricularDetails, addExtraCurricular, removeExtraCurricular} from "../../../redux/userExtraCurricularSlice";
 
 export default function useExtraCurricular() {
-  const showAllECA = useSelector((state) => state.common_flag)
-  const ecaDetails = useSelector((state) => state.eca)
-  const dispatch = useDispatch();
+  const showAllECA    = useSelector((state) => state.common_flag)
+  const ecaDetails    = useSelector((state) => state.eca)
+  const dispatch      = useDispatch();
 
   const [ecaListCnt, setExtraCurricularListCnt] = useState(1)
 

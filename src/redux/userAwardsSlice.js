@@ -2,8 +2,8 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = [
     {
-        flag: false,
-        awardName: "",
+        flag        : false,
+        awardName   : "",
     },
 ]
 
@@ -19,8 +19,8 @@ const userAwardSlice = createSlice({
         },
         addAward: (state) => {
             state.push({
-                flag: false,
-                awardName: "",
+                flag        : false,
+                awardName   : "",
             });
         },
         removeAward: (state, action) => {

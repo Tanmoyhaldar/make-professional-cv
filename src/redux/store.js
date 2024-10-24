@@ -12,13 +12,13 @@ import userExtraCurricularReducer from './userExtraCurricularSlice';
 // Configure the store
 const store = configureStore({
   reducer: {
-    user        : userReducer, 
-    education   : userEducationReducer,
-    skills      : userSkillsExperiseReducer,
-    course      : userCourseWorkReducer,
-    awards      : userAwardsReducer,
-    common_flag : userAllCommonFlagReducer,
-    eca         : userExtraCurricularReducer
+    user          : userReducer, 
+    education     : userEducationReducer,
+    skills        : userSkillsExperiseReducer,
+    course        : userCourseWorkReducer,
+    awards        : userAwardsReducer,
+    common_flag   : userAllCommonFlagReducer,
+    eca           : userExtraCurricularReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });

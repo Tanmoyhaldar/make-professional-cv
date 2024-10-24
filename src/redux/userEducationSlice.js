@@ -3,17 +3,17 @@ import { createSlice } from '@reduxjs/toolkit';
 // Initial state for user details
 const initialState = [
   {
-    flag: false,
-    qualification: "",
-    institute: "",
-    stream: "",
-    passingYear: "",
-    grades: "",
-    qualificationChecked: false,
-    instituteChecked: false,
-    streamChecked: false,
-    passingYearChecked: false,
-    gradesChecked: false,
+    flag                  : false,
+    qualification         : "",
+    institute             : "",
+    stream                : "",
+    passingYear           : "",
+    grades                : "",
+    qualificationChecked  : false,
+    instituteChecked      : false,
+    streamChecked         : false,
+    passingYearChecked    : false,
+    gradesChecked         : false,
 },
 ];
 
@@ -30,24 +30,24 @@ const userEducationSlice = createSlice({
     },
     addEducationDetails: (state) => {
       state.push({
-        flag: false,
-        qualification: "",
-        institute: "",
-        stream: "",
-        passingYear: "",
-        grades: "",
-        qualificationChecked: false,
-        instituteChecked: false,
-        streamChecked: false,
-        passingYearChecked: false,
-        gradesChecked: false,
+        flag                  : false,
+        qualification         : "",
+        institute             : "",
+        stream                : "",
+        passingYear           : "",
+        grades                : "",
+        qualificationChecked  : false,
+        instituteChecked      : false,
+        streamChecked         : false,
+        passingYearChecked    : false,
+        gradesChecked         : false,
       });
     },
     removeEducationDetails: (state, action) => {
       const indexToRemove = action.payload;
       const updatedState = [...state];
-    updatedState.splice(indexToRemove, 1);
-    return updatedState;
+      updatedState.splice(indexToRemove, 1);
+      return updatedState;
     },
   },
 });

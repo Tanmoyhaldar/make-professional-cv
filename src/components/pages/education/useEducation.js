@@ -4,8 +4,8 @@ import { setEducationDetails, removeEducationDetails, addEducationDetails } from
 
 export default function useEducation() {
 
-    const educationDetails = useSelector((state) => state.education);
-    const dispatch = useDispatch();
+    const educationDetails  = useSelector((state) => state.education);
+    const dispatch          = useDispatch();
 
     const [educationListCnt, setEducationListCnt] = useState(1)
 
