@@ -5,10 +5,7 @@ import useSkillsExpertise from './useSkillsExpertise'
 export default function SkillsExpertise() {
 
     const {
-        skillsExpertiseList,
         skillsExpertiseCnt,
-        handleSkillsExpertiseCheckBox,
-        handleSkillsExpertiseDetails,
         addNewSkill,
         removeSkill
     } = useSkillsExpertise()
@@ -18,9 +15,6 @@ export default function SkillsExpertise() {
                 <>
                     <AddNewSkill
                         index={index}
-                        skillsExpertiseList={skillsExpertiseList}
-                        handleSkillsExpertiseCheckBox={handleSkillsExpertiseCheckBox}
-                        handleSkillsExpertiseDetails={handleSkillsExpertiseDetails}
                     />
                     <hr />
                 </>

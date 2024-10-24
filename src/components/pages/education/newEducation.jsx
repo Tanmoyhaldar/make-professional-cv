@@ -1,7 +1,12 @@
 import React from 'react'
 import { checkBoxTitleUserDetails } from '../../constants/constant'
+import useEducation from './useEducation'
 
-export default function NewEducation({ index, handleEducationDetails, educationDetails, handleEducationDetailsCheckBox }) {
+export default function NewEducation({ index }) {
+    const {
+        handleEducationDetails,
+        educationDetails
+    } = useEducation()
     return (
         <>
             <div className="input-group-text my-1">
@@ -10,7 +15,7 @@ export default function NewEducation({ index, handleEducationDetails, educationD
                     type="checkbox"
                     checked={educationDetails[index]?.flag}
                     title={checkBoxTitleUserDetails}
-                    onChange={(e) => { handleEducationDetailsCheckBox(index, 'flag', e.target.checked) }}
+                    onChange={(e) => { handleEducationDetails(index, 'flag', e.target.checked) }}
                 />
                 <span className='mx-2'>Education Details - {index + 1}</span>
             </div>
@@ -24,7 +29,7 @@ export default function NewEducation({ index, handleEducationDetails, educationD
                         type="checkbox"
                         checked={educationDetails[index]?.qualificationChecked}
                         title={checkBoxTitleUserDetails}
-                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'qualificationChecked', e.target.checked) }}
+                        onChange={(e) => { handleEducationDetails(index, 'qualificationChecked', e.target.checked) }}
                     />
                 </div>
                 <input
@@ -46,7 +51,7 @@ export default function NewEducation({ index, handleEducationDetails, educationD
                         type="checkbox"
                         checked={educationDetails[index]?.instituteChecked}
                         title={checkBoxTitleUserDetails}
-                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'instituteChecked', e.target.checked) }}
+                        onChange={(e) => { handleEducationDetails(index, 'instituteChecked', e.target.checked) }}
                     />
                 </div>
                 <input
@@ -68,7 +73,7 @@ export default function NewEducation({ index, handleEducationDetails, educationD
                         type="checkbox"
                         checked={educationDetails[index]?.streamChecked}
                         title={checkBoxTitleUserDetails}
-                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'streamChecked', e.target.checked) }}
+                        onChange={(e) => { handleEducationDetails(index, 'streamChecked', e.target.checked) }}
                     />
                 </div>
                 <input
@@ -90,7 +95,7 @@ export default function NewEducation({ index, handleEducationDetails, educationD
                         type="checkbox"
                         checked={educationDetails[index]?.passingYearChecked}
                         title={checkBoxTitleUserDetails}
-                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'passingYearChecked', e.target.checked) }}
+                        onChange={(e) => { handleEducationDetails(index, 'passingYearChecked', e.target.checked) }}
                     />
                 </div>
                 <input
@@ -112,7 +117,7 @@ export default function NewEducation({ index, handleEducationDetails, educationD
                         type="checkbox"
                         checked={educationDetails[index]?.gradesChecked}
                         title={checkBoxTitleUserDetails}
-                        onChange={(e) => { handleEducationDetailsCheckBox(index, 'gradesChecked', e.target.checked) }}
+                        onChange={(e) => { handleEducationDetails(index, 'gradesChecked', e.target.checked) }}
                     />
                 </div>
                 <input

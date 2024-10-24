@@ -9,10 +9,6 @@ export default function useSkillsExpertise() {
 
     const [skillsExpertiseCnt, setSkillsExpertiseCnt] = useState(1)
 
-    const handleSkillsExpertiseCheckBox = (index, id, value) => {
-        dispatch(setSkillsExpertise({index, id, value}))
-    }
-
     const handleSkillsExpertiseDetails = (index, id, value) => {
           dispatch(setSkillsExpertise({index, id, value}))
       }
@@ -33,7 +29,6 @@ export default function useSkillsExpertise() {
     return {
         skillsExpertiseList,
         skillsExpertiseCnt,
-        handleSkillsExpertiseCheckBox,
         handleSkillsExpertiseDetails,
         addNewSkill,
         removeSkill

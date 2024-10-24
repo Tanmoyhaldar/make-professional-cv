@@ -4,9 +4,6 @@ import NewEducation from './newEducation';
 
 export default function Education() {
   const {
-    educationDetails,
-    handleEducationDetails,
-    handleEducationDetailsCheckBox,
     educationListCnt,
     removeEducation,
     addNewEducation
@@ -19,10 +16,6 @@ export default function Education() {
           <NewEducation
             key={index}
             index={index}
-            handleEducationDetails={handleEducationDetails}
-            educationDetails={educationDetails}
-            handleEducationDetailsCheckBox={handleEducationDetailsCheckBox}
-            removeEducation={removeEducation}
           />
           <hr />
         </>
