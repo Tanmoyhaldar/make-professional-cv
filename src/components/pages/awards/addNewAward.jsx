@@ -1,11 +1,11 @@
 import { checkBoxTitleUserDetails } from "../../constants/constant"
-import useAwardsAndECA from "./useAwardsAndECA"
+import useAwards from "./useAwards"
 
-export default function AddNewAwardsAndECA({ index }) {
+export default function AddNewAward({ index }) {
   const {
     handleAwardsDetails,
     awardDetails
-  } = useAwardsAndECA()
+  } = useAwards()
   return (
     <>
       <div className="input-group mb-1" key={`${index}_award`}>

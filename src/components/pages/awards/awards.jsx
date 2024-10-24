@@ -1,15 +1,15 @@
 import { checkBoxTitleUserDetails } from "../../constants/constant"
-import AddNewAwardsAndECA from "./addNewAwardsAndECA"
-import useAwardsAndECA from "./useAwardsAndECA"
+import AddNewAwards from "./addNewAward"
+import useAwards from "./useAwards"
 
-export default function AwardsAndECA({ title }) {
+export default function Awards() {
     const {
         showAllAwards,
         awardsListCnt,
         handleShowAllRewards,
         addNewAward,
         removeLastAward
-    } = useAwardsAndECA()
+    } = useAwards()
 
     return (
         <>
@@ -21,11 +21,11 @@ export default function AwardsAndECA({ title }) {
                     title={checkBoxTitleUserDetails}
                     onChange={(e) => { handleShowAllRewards(e.target.checked) }}
                 />
-                <span className='mx-2'>{title}</span>
+                <span className='mx-2'>Awards and Acheivements</span>
             </div>
             {awardsListCnt != 0 && [...Array(awardsListCnt)].map((_, index) => (
                 <>
-                    <AddNewAwardsAndECA
+                    <AddNewAwards
                         index={index}
                     />
                 </>
@@ -34,7 +34,7 @@ export default function AwardsAndECA({ title }) {
             <button
                 className="btn btn-primary mx-1"
             onClick={addNewAward}
-            >+ Add Course Work</button>
+            >+ Add Awards</button>
             {awardsListCnt > 1 &&
                 <button
                     className="btn btn-danger mx-1"
