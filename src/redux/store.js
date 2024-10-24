@@ -3,7 +3,7 @@ import {thunk} from 'redux-thunk';
 
 import userReducer from './userDetailsSlice';
 import userEducationReducer from './userEducationSlice';
-import skillsExperiseReducer from './skillsExperiseSlice';
+import userSkillsExperiseReducer from './userSkillsExpertiseSlice';
 import userCourseWorkReducer from './userCourseWorkSlice';
 import userAllCommonFlagReducer from './userAllCommonSlice';
 import userAwardsReducer from './userAwardsSlice';
@@ -14,7 +14,7 @@ const store = configureStore({
   reducer: {
     user        : userReducer, 
     education   : userEducationReducer,
-    skills      : skillsExperiseReducer,
+    skills      : userSkillsExperiseReducer,
     course      : userCourseWorkReducer,
     awards      : userAwardsReducer,
     common_flag : userAllCommonFlagReducer,

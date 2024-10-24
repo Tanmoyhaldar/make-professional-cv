@@ -39,7 +39,7 @@ export default function Awards() {
                 <button
                     className="btn btn-danger mx-1"
                 onClick={() => removeLastAward()}
-                >- Remove</button>
+                >- Remove Awards</button>
             }
         </>
     )
