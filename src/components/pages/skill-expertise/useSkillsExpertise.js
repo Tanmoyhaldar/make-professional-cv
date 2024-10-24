@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setSkillsExpertise, addSkillsExpertise, removeSkillsExpertise } from '../../../redux/skillsExperiseSlice';
+import { setSkillsExpertise, addSkillsExpertise, removeSkillsExpertise } from '../../../redux/userSkillsExpertiseSlice';
 import { useState } from 'react';
 
 export default function useSkillsExpertise() {

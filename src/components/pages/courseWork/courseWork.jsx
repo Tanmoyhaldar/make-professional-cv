@@ -41,7 +41,7 @@ export default function CourseWork() {
                     <button
                         className="btn btn-danger mx-1"
                         onClick={() => removeLastCourseWork()}
-                    >- Remove</button>
+                    >- Remove Course Work</button>
                 }
             </div>
         </>

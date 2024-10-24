@@ -38,7 +38,7 @@ export default function ExtraCurricular() {
         <button
           className="btn btn-danger mx-1"
           onClick={() => removeLastExtraCurricular()}
-        >- Remove</button>
+        >- Remove ECA</button>
       }
     </>
   )
