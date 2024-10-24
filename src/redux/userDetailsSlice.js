@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // Initial state for user details
 const initialState = {
-  userName: "",
-  userPhone: "",
-  userEmail: "",
-  userNameChecked: false,
-  userPhoneChecked: false,
-  userEmailChecked: false,
+  userName          : "",
+  userPhone         : "",
+  userEmail         : "",
+  userNameChecked   : false,
+  userPhoneChecked  : false,
+  userEmailChecked  : false,
 };
 
 // Create the user slice

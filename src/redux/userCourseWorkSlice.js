@@ -2,8 +2,8 @@ import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = [
     {
-        flag: false,
-        courseName: "",
+        flag        : false,
+        courseName  : "",
     },
 ]
 
@@ -19,8 +19,8 @@ const userCourseWorkSlice = createSlice({
         },
         addCourseWork: (state) => {
             state.push({
-                flag: false,
-                courseName: "",
+                flag        : false,
+                courseName  : "",
             });
         },
         removeCourseWork: (state, action) => {

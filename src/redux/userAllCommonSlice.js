@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // Initial state for user details
 const initialState = {
-    courseFlag: false,
-    awardsFlag: false,
-    ecaFlag: false
+    courseFlag  : false,
+    awardsFlag  : false,
+    ecaFlag     : false
 };
 
 const userAllCommonSlice = createSlice({

@@ -4,9 +4,9 @@ import { setCommonFlag } from "../../../redux/userAllCommonSlice";
 import {setAwardsDetails, addAward, removeAward} from "../../../redux/userAwardsSlice";
 
 export default function useAwards() {
-  const showAllAwards = useSelector((state) => state.common_flag)
-  const awardDetails = useSelector((state) => state.awards)
-  const dispatch = useDispatch();
+  const showAllAwards   = useSelector((state) => state.common_flag)
+  const awardDetails    = useSelector((state) => state.awards)
+  const dispatch        = useDispatch();
 
   const [awardsListCnt, setAwardsListCnt] = useState(1)
 
