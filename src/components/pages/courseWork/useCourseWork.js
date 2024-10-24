@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {setCourseWorkDetails, addCourseWork, removeCourseWork} from "../../../redux/userCourseWorkSlice";
-import { setCourseFlag } from "../../../redux/userAllCourseWorkSlice";
+import { setCommonFlag } from "../../../redux/userAllCommonSlice";
 
 export default function useCourseWork() {
   const courseDetails = useSelector((state) => state.course);
-  const showAllCourseWork = useSelector((state) => state.course_flag)
+  const showAllCourseWork = useSelector((state) => state.common_flag)
   const dispatch = useDispatch();
 
   const [courseWorkListCnt, setCourseWorkListCnt] = useState(1);
@@ -20,7 +20,7 @@ export default function useCourseWork() {
   };
 
   const handleShowAllCourseWork = (value) => {
-    dispatch(setCourseFlag({value : value}))
+    dispatch(setCommonFlag({id: "courseFlag", value : value}))
   }
 
   const removeLastCourseWork = () => {

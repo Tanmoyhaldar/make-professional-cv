@@ -5,6 +5,7 @@ import Education from './education/Education'
 import useHome from './useHome'
 import SkillsExpertise from './skill-expertise/skillsExpertise'
 import CourseWork from './courseWork/courseWork'
+import AwardsAndECA from './awardsAndECA/awardsAndECA'
 
 export default function Home() {
   // 1. user details
@@ -31,6 +32,12 @@ export default function Home() {
 
           <div className='border border-success p-2 rounded my-1'>
             <CourseWork />
+          </div>
+
+          <div className='border border-success p-2 rounded my-1'>
+            <AwardsAndECA 
+              title={`Awards and Acheivements`}
+            />
           </div>
 
         </div>
