@@ -1,7 +1,12 @@
 import React from 'react'
 import { checkBoxTitleUserDetails } from '../../constants/constant'
+import useSkillsExpertise from './useSkillsExpertise'
 
-export default function AddNewSkill({ index, skillsExpertiseList, handleSkillsExpertiseCheckBox, handleSkillsExpertiseDetails }) {
+export default function AddNewSkill({ index }) {
+    const {
+        skillsExpertiseList, 
+        handleSkillsExpertiseDetails
+    } = useSkillsExpertise()
     return (
         <div>
             <div className="input-group-text mb-1" key={`skills_${index}`}>
@@ -10,7 +15,7 @@ export default function AddNewSkill({ index, skillsExpertiseList, handleSkillsEx
                     type="checkbox"
                     checked={skillsExpertiseList[index]?.flag}
                     title={checkBoxTitleUserDetails}
-                    onChange={(e) => { handleSkillsExpertiseCheckBox(index, 'flag', e.target.checked) }}
+                    onChange={(e) => { handleSkillsExpertiseDetails(index, 'flag', e.target.checked) }}
                 />
                 <span className='mx-2'>Skills & Expertise - {index + 1}</span>
             </div>

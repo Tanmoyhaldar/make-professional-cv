@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setEducationDetails, removeEducationDetails, addEducationDetails } from '../../../redux/userEducationSlice';
 
@@ -10,10 +10,6 @@ export default function useEducation() {
     const [educationListCnt, setEducationListCnt] = useState(1)
 
     const handleEducationDetails = (index, id, value) => {
-        dispatch(setEducationDetails({index, id, value}))
-    }
-
-    const handleEducationDetailsCheckBox = (index, id, value) => {
         dispatch(setEducationDetails({index, id, value}))
     }
 
@@ -33,7 +29,6 @@ export default function useEducation() {
   return {
     educationDetails,
     handleEducationDetails,
-    handleEducationDetailsCheckBox,
     educationListCnt,
     removeEducation,
     addNewEducation
