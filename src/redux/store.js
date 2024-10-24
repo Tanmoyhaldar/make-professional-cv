@@ -5,7 +5,8 @@ import userReducer from './userDetailsSlice';
 import userEducationReducer from './userEducationSlice';
 import skillsExperiseReducer from './skillsExperiseSlice';
 import userCourseWorkReducer from './userCourseWorkSlice';
-import userAllCourseFlagReducer from './userAllCourseWorkSlice';
+import userAllCommonFlagReducer from './userAllCommonSlice';
+import userAwardsReducer from './userAwardsSlice';
 
 // Configure the store
 const store = configureStore({
@@ -14,7 +15,8 @@ const store = configureStore({
     education: userEducationReducer,
     skills: skillsExperiseReducer,
     course: userCourseWorkReducer,
-    course_flag: userAllCourseFlagReducer
+    awards: userAwardsReducer,
+    common_flag: userAllCommonFlagReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
