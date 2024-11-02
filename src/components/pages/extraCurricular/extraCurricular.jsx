@@ -20,7 +20,7 @@ export default function ExtraCurricular() {
           title={checkBoxTitleUserDetails}
           onChange={(e) => { handleShowAllExtraCurricular(e.target.checked) }}
         />
-        <span className='mx-2'>Awards and Acheivements</span>
+        <span className='mx-2'>Extra Curricular Activities</span>
       </div>
       {ecaListCnt != 0 && [...Array(ecaListCnt)].map((_, index) => (
         <>

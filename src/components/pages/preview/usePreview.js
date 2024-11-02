@@ -7,6 +7,7 @@ export default function usePreview() {
     const courseDetails             = useSelector((state) => state.course)
     const awardsDetails             = useSelector((state) => state.awards)
     const ecaDetails                = useSelector((state) => state.eca)
+    const projectDetails            = useSelector((state) => state.self_made_projects)
     const dispatch                  = useDispatch();
 
   return {
@@ -16,5 +17,6 @@ export default function usePreview() {
     courseDetails,
     awardsDetails,
     ecaDetails,
+    projectDetails
   }
 }

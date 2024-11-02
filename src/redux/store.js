@@ -8,17 +8,19 @@ import userCourseWorkReducer from './userCourseWorkSlice';
 import userAllCommonFlagReducer from './userAllCommonSlice';
 import userAwardsReducer from './userAwardsSlice';
 import userExtraCurricularReducer from './userExtraCurricularSlice';
+import userSelfMadeProjectsReducer from './userSelfMadeProjectsSlice';
 
 // Configure the store
 const store = configureStore({
   reducer: {
-    user          : userReducer, 
-    education     : userEducationReducer,
-    skills        : userSkillsExperiseReducer,
-    course        : userCourseWorkReducer,
-    awards        : userAwardsReducer,
-    common_flag   : userAllCommonFlagReducer,
-    eca           : userExtraCurricularReducer
+    user                  : userReducer, 
+    education             : userEducationReducer,
+    skills                : userSkillsExperiseReducer,
+    course                : userCourseWorkReducer,
+    awards                : userAwardsReducer,
+    common_flag           : userAllCommonFlagReducer,
+    eca                   : userExtraCurricularReducer,
+    self_made_project     : userSelfMadeProjectsReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });

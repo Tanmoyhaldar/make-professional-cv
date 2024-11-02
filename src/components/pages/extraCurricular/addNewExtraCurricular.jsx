@@ -22,7 +22,7 @@ export default function AddNewExtraCurricular({index}) {
         <input
           type="text"
           className="form-control"
-          placeholder={`Enter Extra Curricular Activities`}
+          placeholder={`Enter Extra Curricular Activity`}
           value={ecaDetails[index]?.extraCurricular}
           id="award"
           onChange={(e) => { handleExtraCurricularDetails(index, 'extraCurricular', e.target.value) }}
