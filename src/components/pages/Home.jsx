@@ -6,12 +6,17 @@ import SkillsExpertise from './skill-expertise/skillsExpertise'
 import CourseWork from './courseWork/courseWork'
 import Awards from './awards/awards'
 import ExtraCurricular from './extraCurricular/extraCurricular'
+import SelfMadeProjects from './self-made-projects/selfMadeProjects'
 
 export default function Home() {
 
   return (
       <div className="d-flex p-2 justify-content-center">
         <div>
+
+        <div className='border border-success p-2 rounded my-1'>
+            <SelfMadeProjects />
+          </div>
 
           <div className='border border-success p-2 rounded my-1'>
             <UserDetails />
@@ -36,6 +41,7 @@ export default function Home() {
           <div className='border border-success p-2 rounded my-1'>
             <ExtraCurricular />
           </div>
+          
 
         </div>
 
